@@ -39,10 +39,10 @@ local get_material_properties = function(material)
 end
 
 local materials
-if minetest.get_modpath("castle_masonry") then
+if minetest.get_modpath("hades_castle_masonry") then
 	materials = castle_masonry.materials
 else
-	materials = {{name="stonebrick", desc=S("Stonebrick"), tile="default_stone_brick.png", craft_material="default:stonebrick"}}
+	materials = {{name="stonebrick", desc=S("Stonebrick"), tile="default_stone_brick.png", craft_material="hades_core:stonebrick"}}
 end
 
 castle_gates.register_gate_slot = function(material)

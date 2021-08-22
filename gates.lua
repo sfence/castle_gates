@@ -27,7 +27,7 @@ for group, val in pairs(gate_groups) do
 	panel_groups[group] = val
 end
 
-minetest.register_node("castle_gates:"..node_prefix.."_portcullis_bars", {
+minetest.register_node("hades_castle_gates:"..node_prefix.."_portcullis_bars", {
 	drawtype = "nodebox",
 	description = S("@1 Portcullis Bars", material_description),
 	_doc_items_longdesc = castle_gates.doc.portcullis_bars_longdesc,
@@ -57,7 +57,7 @@ minetest.register_node("castle_gates:"..node_prefix.."_portcullis_bars", {
 	on_rightclick = castle_gates.trigger_gate,
 })
 
-minetest.register_node("castle_gates:"..node_prefix.."_portcullis_bars_bottom", {
+minetest.register_node("hades_castle_gates:"..node_prefix.."_portcullis_bars_bottom", {
 	drawtype = "nodebox",
 	description = S("@1 Portcullis Bottom", material_description),
 	_doc_items_longdesc = castle_gates.doc.portcullis_bars_bottom_longdesc,
@@ -117,7 +117,7 @@ minetest.register_craft({
 	recipe = panel_recipe,
 })
 
-minetest.register_node("castle_gates:"..node_prefix.."_gate_panel", {
+minetest.register_node("hades_castle_gates:"..node_prefix.."_gate_panel", {
 	drawtype = "nodebox",
 	description = S("@1 Gate Door", material_description),
 	_doc_items_longdesc = castle_gates.doc.gate_panel_longdesc,
@@ -149,7 +149,7 @@ minetest.register_craft({
 	recipe = {"castle_gates:"..node_prefix.."_gate_panel"},
 })
 
-minetest.register_node("castle_gates:"..node_prefix.."_gate_edge", {
+minetest.register_node("hades_castle_gates:"..node_prefix.."_gate_edge", {
 	drawtype = "nodebox",
 	description = S("@1 Gate Door Edge", material_description),
 	_doc_items_longdesc = castle_gates.doc.gate_edge_longdesc,
@@ -188,7 +188,7 @@ minetest.register_craft({
 	recipe = {"castle_gates:"..node_prefix.."_gate_edge_handle"},
 })
 
-minetest.register_node("castle_gates:"..node_prefix.."_gate_edge_handle", {
+minetest.register_node("hades_castle_gates:"..node_prefix.."_gate_edge_handle", {
 	drawtype = "nodebox",
 	description = S("@1 Gate Door With Handle", material_description),
 	_doc_items_longdesc = castle_gates.doc.gate_edge_handle_longdesc,
@@ -231,7 +231,7 @@ minetest.register_craft({
 	},
 })
 
-minetest.register_node("castle_gates:"..node_prefix.."_gate_hinge", {
+minetest.register_node("hades_castle_gates:"..node_prefix.."_gate_hinge", {
 	drawtype = "nodebox",
 	description = S("@1 Gate Door With Hinge", material_description),
 	_doc_items_longdesc = castle_gates.doc.gate_hinge_longdesc,
@@ -262,7 +262,7 @@ minetest.register_node("castle_gates:"..node_prefix.."_gate_hinge", {
 
 end
 
-register_gates("wood", S("Wooden"), "default_wood.png", {choppy = 1}, default.node_sound_wood_defaults(),
+register_gates("wood", S("Wooden"), "default_wood.png", {choppy = 1}, hades_sounds.node_sound_wood_defaults(),
 	{
 		{"group:wood","default:steel_ingot","group:wood" },
 		{"group:wood","default:steel_ingot","group:wood" },
@@ -274,7 +274,7 @@ register_gates("wood", S("Wooden"), "default_wood.png", {choppy = 1}, default.no
 	}
 )
 
-register_gates("steel", S("Steel"), "default_steel_block.png", {cracky = 1, level = 2}, default.node_sound_metal_defaults(),
+register_gates("steel", S("Steel"), "default_steel_block.png", {cracky = 1, level = 2}, hades_sounds.node_sound_metal_defaults(),
 	{
 		{"","default:steel_ingot","" },
 		{"default:steel_ingot","default:steel_ingot","default:steel_ingot" },

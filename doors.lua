@@ -15,13 +15,13 @@ end
 
 
 if minetest.get_modpath("doors") then
-	doors.register("castle_gates:oak_door", {
+	doors.register("hades_castle_gates:oak_door", {
 		tiles = {{ name = "castle_door_oak.png", backface_culling = true }},
 		description = S("Oak Door"),
 		inventory_image = "castle_oak_door_inv.png",
 		protected = true,
 		groups = { choppy = 2, door = 1 },
-		sounds = default.node_sound_wood_defaults(),
+		sounds = hades_sounds.node_sound_wood_defaults(),
 		recipe = {
 			{"default:tree", "default:tree"},
 			{"default:tree", "default:tree"},
@@ -30,21 +30,21 @@ if minetest.get_modpath("doors") then
 	})
 
 	local door_recipe
-	if minetest.get_modpath("xpanes") then
+	if minetest.get_modpath("hades_xpanes") then
 		door_recipe = {
-			{"xpanes:jailbars_flat", "xpanes:jailbars_flat"},
-			{"xpanes:jailbars_flat", "xpanes:jailbars_flat"},
-			{"xpanes:jailbars_flat", "xpanes:jailbars_flat"},
+			{"hades_xpanes:jailbars_flat", "hades_xpanes:jailbars_flat"},
+			{"hades_xpanes:jailbars_flat", "hades_xpanes:jailbars_flat"},
+			{"hades_xpanes:jailbars_flat", "hades_xpanes:jailbars_flat"},
 		}
 	else
 		door_recipe = {
-			{"default:steel_ingot", ""},
-			{"", "default:steel_ingot"},
-			{"default:steel_ingot", ""},
+			{"hades_core:steel_ingot", ""},
+			{"", "hades_core:steel_ingot"},
+			{"hades_core:steel_ingot", ""},
 		}
 	end
 	
-	doors.register("castle_gates:jail_door", {
+	doors.register("hades_castle_gates:jail_door", {
 		tiles = {{ name = "castle_door_jail.png", backface_culling = true }},
 		description = S("Jail Door"),
 		inventory_image = "castle_jail_door_inv.png",
@@ -70,7 +70,7 @@ if minetest.get_modpath("xpanes") then
 		textures = {"castle_jailbars.png", "castle_jailbars.png", "castle_jailbars.png"},
 		inventory_image = "castle_jailbars.png",
 		wield_image = "castle_jailbars.png",
-		sounds = default.node_sound_metal_defaults(),
+		sounds = hades_sounds.node_sound_metal_defaults(),
 		groups = {cracky=1, pane=1, flow_through=1},
 		recipe = {
 			{"default:steel_ingot", "default:steel_ingot", "default:steel_ingot"},
