@@ -23,9 +23,9 @@ if minetest.get_modpath("doors") then
 		groups = { choppy = 2, door = 1 },
 		sounds = hades_sounds.node_sound_wood_defaults(),
 		recipe = {
-			{"default:tree", "default:tree"},
-			{"default:tree", "default:tree"},
-			{"default:tree", "default:tree"},
+			{"oak:trunk", "oak:trunk"},
+			{"oak:trunk", "oak:trunk"},
+			{"oak:trunk", "oak:trunk"},
 		}
 	})
 
@@ -73,9 +73,9 @@ if minetest.get_modpath("xpanes") then
 		sounds = hades_sounds.node_sound_metal_defaults(),
 		groups = {cracky=1, pane=1, flow_through=1},
 		recipe = {
-			{"default:steel_ingot", "default:steel_ingot", "default:steel_ingot"},
-			{"default:steel_ingot", "",                    "default:steel_ingot"},
-			{"default:steel_ingot", "default:steel_ingot", "default:steel_ingot"}},
+			{"hades_core:steel_ingot", "hades_core:steel_ingot", "hades_core:steel_ingot"},
+			{"hades_core:steel_ingot", "",                    "hades_core:steel_ingot"},
+			{"hades_core:steel_ingot", "hades_core:steel_ingot", "hades_core:steel_ingot"}},
 	})
 end
 

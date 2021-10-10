@@ -226,7 +226,7 @@ minetest.register_craft({
 	output = "castle_gates:"..node_prefix.."_gate_hinge 3",
 	recipe = {
 		{"", "castle_gates:"..node_prefix.."_gate_panel", ""},
-		{"default:steel_ingot", "castle_gates:"..node_prefix.."_gate_panel", ""},
+		{"hades_core:steel_ingot", "castle_gates:"..node_prefix.."_gate_panel", ""},
 		{"", "castle_gates:"..node_prefix.."_gate_panel", ""}
 	},
 })
@@ -264,9 +264,9 @@ end
 
 register_gates("wood", S("Wooden"), "default_wood.png", {choppy = 1}, hades_sounds.node_sound_wood_defaults(),
 	{
-		{"group:wood","default:steel_ingot","group:wood" },
-		{"group:wood","default:steel_ingot","group:wood" },
-		{"group:wood","default:steel_ingot","group:wood" },
+		{"group:wood","hades_core:steel_ingot","group:wood" },
+		{"group:wood","hades_core:steel_ingot","group:wood" },
+		{"group:wood","hades_core:steel_ingot","group:wood" },
 	},
 	{
 		{"stairs:slab_wood","stairs:slab_wood", ""},
@@ -276,9 +276,9 @@ register_gates("wood", S("Wooden"), "default_wood.png", {choppy = 1}, hades_soun
 
 register_gates("steel", S("Steel"), "default_steel_block.png", {cracky = 1, level = 2}, hades_sounds.node_sound_metal_defaults(),
 	{
-		{"","default:steel_ingot","" },
-		{"default:steel_ingot","default:steel_ingot","default:steel_ingot" },
-		{"","default:steel_ingot","" },
+		{"","hades_core:steel_ingot","" },
+		{"hades_core:steel_ingot","hades_core:steel_ingot","hades_core:steel_ingot" },
+		{"","hades_core:steel_ingot","" },
 	},
 	{
 		{"stairs:slab_steelblock","stairs:slab_steelblock", ""},
