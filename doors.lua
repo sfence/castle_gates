@@ -61,7 +61,7 @@ if minetest.get_modpath("doors") then
 	minetest.register_alias("castle:jail_door_b", "castle_gates:jail_door_b")
 end
 
-if minetest.get_modpath("xpanes") then
+if minetest.get_modpath("hades_xpanes") then
 	xpanes.register_pane("jailbars", {
 		description = S("Jail Bars"),
 		tiles = {"castle_jailbars.png"},
