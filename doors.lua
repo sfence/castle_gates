@@ -14,8 +14,8 @@ else
 end
 
 
-if minetest.get_modpath("doors") then
-	doors.register("hades_castle_gates:oak_door", {
+if minetest.get_modpath("hades_doors") then
+	hades_doors.register("hades_castle_gates:oak_door", {
 		tiles = {{ name = "castle_door_oak.png", backface_culling = true }},
 		description = S("Oak Door"),
 		inventory_image = "castle_oak_door_inv.png",
@@ -44,7 +44,7 @@ if minetest.get_modpath("doors") then
 		}
 	end
 	
-	doors.register("hades_castle_gates:jail_door", {
+	hades_doors.register("hades_castle_gates:jail_door", {
 		tiles = {{ name = "castle_door_jail.png", backface_culling = true }},
 		description = S("Jail Door"),
 		inventory_image = "castle_jail_door_inv.png",
